@@ -1,14 +1,2 @@
-language: cpp
-compiler: gcc
-sudo: yes
-
-install:
- - sudo apt-get install r-base-dev
- - sudo Rscript install_rcpp.R
-
-script: 
- - ./build_cpp.sh
-
-after_script:
- - cd /
- - find . | egrep "Rcpp\.h"
+language: r
+warnings_are_errors: true
