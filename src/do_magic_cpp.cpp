@@ -1,3 +1,5 @@
+#include "do_magic_cpp.h"
+
 #include <Rcpp.h>
 
 using namespace Rcpp;
