@@ -8,7 +8,7 @@ Maintainer: Richel Bilderbeek <richel@srichelbilderbeek.nl>
 Description: The tests within the R package should call the R function
     'do_magic_r'. 'do_magic_r' calls the C++ function 'do_magic_cpp'. Additionally,
     the C++ code can also be run and tested stand-alone.
-License: file: LICENSE
+License: file:LICENSE
 Suggests:
     testthat,
     knitr,
