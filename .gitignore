@@ -30,3 +30,4 @@
 domagic.Rcheck/
 .Rproj.user/
 .Rproj.user
+*.pro.user

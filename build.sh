@@ -1,2 +1,2 @@
 #!/bin/bash
-git clone https://github.com/RcppCore/Rcpp.git
+echo "Nothing to be done"
