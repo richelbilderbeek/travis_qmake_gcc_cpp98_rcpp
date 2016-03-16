@@ -1,7 +1,12 @@
 language: cpp
 compiler: gcc
-script: 
+sudo: yes
+
+install:
+ - sudo apt-get install r-base-dev
  - Rscript install_rcpp.R
+
+script: 
  - ./build_cpp.sh
 
 after_script:
