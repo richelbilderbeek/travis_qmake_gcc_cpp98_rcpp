@@ -5,7 +5,7 @@
 #' @useDynLib domagic
 #' @importFrom Rcpp sourceCpp
 do_magic_r <- function(x) {
-  return(x * 2)
+  return(do_magic_cpp(x))
 }
 
 

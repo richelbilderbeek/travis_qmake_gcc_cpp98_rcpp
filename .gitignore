@@ -32,3 +32,5 @@ domagic.Rcheck/
 .Rproj.user
 *.pro.user
 *.pro.user
+.nsf*
+src/.nsf*
