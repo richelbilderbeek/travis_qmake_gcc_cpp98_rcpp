@@ -1,0 +1,19 @@
+---
+title: "Demo of do_magic_r"
+author: "Richel Bilderbeek"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Demo of do_magic_r}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r}
+library(domagic)
+x <- c(1,2,3,42,314)
+y <- do_magic_r(x)
+print(x)
+print(y)
+
+```

@@ -1,0 +1,9 @@
+{
+    "path" : "~/GitHubs/travis_qmake_gcc_cpp98_rcpp/domagic/tests",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
