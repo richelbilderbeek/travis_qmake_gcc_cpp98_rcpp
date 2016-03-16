@@ -1,3 +1,9 @@
 language: cpp
 compiler: gcc
-script: ./build_cpp.sh
+script: 
+ - Rscript install_rcpp.R
+ - ./build_cpp.sh
+
+after_script:
+ - cd /
+ - find . | egrep "Rcpp\.h"
