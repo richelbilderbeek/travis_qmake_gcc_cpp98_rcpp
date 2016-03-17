@@ -36,3 +36,6 @@ domagic.Rcheck/
 src/.nsf*
 Makefile
 domagic
+*.pro.user
+*.pro.user.*
+..Rcheck/
