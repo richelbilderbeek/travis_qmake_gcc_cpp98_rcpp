@@ -1,2 +1,11 @@
-language: r
-warnings_are_errors: true
+language: cpp
+compiler: gcc
+sudo: yes
+
+install:
+ - sudo apt-get install r-base-dev
+ - sudo Rscript install_rcpp.R
+
+script: 
+ - ./build_cpp.sh
+ - ./check_r.sh
