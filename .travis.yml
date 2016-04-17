@@ -14,6 +14,7 @@ install:
 script: 
  # C++
  - ./build_cpp.sh
+ - ./domagic
  # R wants all non-R files gone...
  - ./clean.sh
  - sudo Rscript install_r_packages.R
