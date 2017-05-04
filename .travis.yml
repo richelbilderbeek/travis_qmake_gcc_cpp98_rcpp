@@ -23,8 +23,9 @@ script:
  - rm .Rhistory
  - rm src/.gitignore
  - rm .travis.yml
- - rm .git
- - rm ..Rcheck
+ - rm -rf .git
+ - rm -rf ..Rcheck
+ - rm *.o
  # R
  - R CMD check .
 
