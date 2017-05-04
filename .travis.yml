@@ -9,8 +9,6 @@ before_install:
 install: 
   # R
   - sudo apt-get install -qq r-base r-base-dev # For R
-  - sudo apt-get install -qq lyx     # For pdflatex
-  - sudo apt-get install -qq texlive # For pdflatex
   - sudo Rscript install_r_packages.R
 
 script: 
