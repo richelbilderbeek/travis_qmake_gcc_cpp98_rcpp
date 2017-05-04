@@ -22,9 +22,21 @@ Less complex builds:
 
 ## Architecture
 
-This setup allows for independent C++ and R development.
+This setup allows for independent C++ and R development. The C++ function `do_magic_cpp` is used 
+by both the C++ project and the R package.
 
-### C++
+### The C++ project
 
+ * `domagic.pro`: `qmake` project file
+ * `main.cpp`: contains the `main` function
+ * `src/do_magic_cpp.h`: header file with the `do_magic_cpp` function declaration
+ * `src/do_magic_cpp.cpp`: source file with the `do_magic_cpp` function definition
 
+Note that the C++ code is not tested directly. The R package does this.
+
+### The R package
+
+ * `domagic.Rproj`: RStudio project file
+ * `R/do_magic_r.R`: defines the `do_magic_r` function, which calls the `do_magic_cpp` function
+ * `/tests/testthat/test-do_magic.R`: tests the `do_magic_r` function
 

@@ -8,14 +8,23 @@ before_install:
 
 install: 
   # R
-  - sudo apt-get install -qq r-base r-base-dev # For R
+  - sudo apt-get install -qq r-base r-base-dev
   - sudo Rscript install_r_packages.R
+  # pdflatex, for R vignettes
+  - sudo apt-get install -qq texlive
 
 script: 
  # C++
  - qmake
  - make
  - ./domagic
+ # Prepare R, must be removed manually, even though these are also mentioned in `.gitignore`
+ - rm .gitignore
+ - rm .Rhistory
+ - rm src/.gitignore
+ - rm .travis.yml
+ - rm .git
+ - rm ..Rcheck
  # R
  - R CMD check .
 
