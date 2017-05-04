@@ -19,3 +19,12 @@ The goal of this project is to have a clean Travis CI build, with specs:
 Less complex builds:
  * Use STL only: [travis_qmake_gcc_cpp98](https://www.github.com/richelbilderbeek/travis_qmake_gcc_cpp98)
  * No `Rcpp`: [travis_r_minimal](https://www.github.com/richelbilderbeek/travis_r_minimal)
+
+## Architecture
+
+This setup allows for independent C++ and R development.
+
+### C++
+
+
+

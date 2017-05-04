@@ -10,10 +10,10 @@ INCLUDEPATH += /home/richel/R/i686-pc-linux-gnu-library/3.2/Rcpp/include
 INCLUDEPATH += /usr/share/R/include/
 
 SOURCES += \
-    src/do_magic_cpp.cpp \
-    main.cpp
+    $$PWD/src/do_magic_cpp.cpp \
+    $$PWD/main.cpp
 
 HEADERS += \
-    src/do_magic_cpp.h
+    $$PWD/src/do_magic_cpp.h
 
 LIBS += -lR
