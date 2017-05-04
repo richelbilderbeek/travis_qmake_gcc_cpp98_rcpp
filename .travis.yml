@@ -27,7 +27,6 @@ script:
  - rm *.o
  - rm domagic
  - rm -rf ..Rcheck
- - rm ..Rcheck
  # R
  - R CMD check .
 
