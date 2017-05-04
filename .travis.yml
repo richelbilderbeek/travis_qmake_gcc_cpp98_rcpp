@@ -7,23 +7,26 @@ before_install:
   - sudo apt-get update -qq
 
 install: 
-  - sudo apt-get install -qq r-base r-base-dev # For R
-  - sudo apt-get install -qq lyx     # For pdflatex
-  - sudo apt-get install -qq texlive # For pdflatex
+  # R
+  - sudo apt-get install -qq r-base r-base-dev
+  - sudo Rscript install_r_packages.R
+  # pdflatex, for R vignettes
+  - sudo apt-get install -qq texlive
 
 script: 
  # C++
- - ./build_cpp.sh
+ - qmake
+ - make
  - ./domagic
- # R wants all non-R files gone...
- - ./clean.sh
- - sudo Rscript install_r_packages.R
+ # Prepare R, must be removed manually, even though these are also mentioned in `.gitignore`
  - rm .gitignore
+ - rm .Rhistory
  - rm src/.gitignore
  - rm .travis.yml
  - rm -rf .git
  - rm -rf ..Rcheck
- # Now R is ready to go
+ - rm *.o
+ # R
  - R CMD check .
 
 after_failure:
