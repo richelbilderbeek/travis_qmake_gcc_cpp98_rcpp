@@ -13,10 +13,11 @@ install:
 
 script: 
  # C++
- - ./build_cpp.sh
+ - qmake
+ - make
  - ./domagic
  # R wants all non-R files gone...
- - ./clean.sh
+ - ./clean
  - sudo Rscript install_r_packages.R
  - rm .gitignore
  - rm src/.gitignore
