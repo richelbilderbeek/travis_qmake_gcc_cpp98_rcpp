@@ -16,8 +16,9 @@ script:
  - qmake
  - make
  - ./domagic
+ - make clean
  # R wants all non-R files gone...
- - ./clean
+ #- ./clean
  - sudo Rscript install_r_packages.R
  - rm .gitignore
  - rm src/.gitignore
