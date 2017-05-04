@@ -7,25 +7,18 @@ before_install:
   - sudo apt-get update -qq
 
 install: 
+  # R
   - sudo apt-get install -qq r-base r-base-dev # For R
   - sudo apt-get install -qq lyx     # For pdflatex
   - sudo apt-get install -qq texlive # For pdflatex
+  - sudo Rscript install_r_packages.R
 
 script: 
  # C++
  - qmake
  - make
  - ./domagic
- - make clean
- # R wants all non-R files gone...
- #- ./clean
- - sudo Rscript install_r_packages.R
- - rm .gitignore
- - rm src/.gitignore
- - rm .travis.yml
- - rm -rf .git
- - rm -rf ..Rcheck
- # Now R is ready to go
+ # R
  - R CMD check .
 
 after_failure:
