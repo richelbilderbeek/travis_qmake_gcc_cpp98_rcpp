@@ -24,8 +24,10 @@ script:
  - rm src/.gitignore
  - rm .travis.yml
  - rm -rf .git
- - rm -rf ..Rcheck
  - rm *.o
+ - rm domagic
+ - rm -rf ..Rcheck
+ - rm ..Rcheck
  # R
  - R CMD check .
 
