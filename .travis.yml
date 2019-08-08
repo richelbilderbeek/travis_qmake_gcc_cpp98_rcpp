@@ -2,6 +2,7 @@ language: cpp
 dist: bionic
 sudo: true
 compiler: gcc
+dist: trusty
 
 before_install:
   - sudo add-apt-repository -y ppa:marutter/rrutter # For R
@@ -25,8 +26,9 @@ script:
  - rm src/.gitignore
  - rm .travis.yml
  - rm -rf .git
- - rm -rf ..Rcheck
  - rm *.o
+ - rm domagic
+ - rm -rf ..Rcheck
  # R
  - R CMD check .
 
